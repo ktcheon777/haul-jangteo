@@ -85,16 +85,19 @@ export default async function ProductDetailPage({
         {/* 이미지 갤러리 (슬라이더) */}
         <ImageGallery images={product.image_urls ?? []} title={product.title} />
 
-        {/* 판매자 정보 */}
-        <div className="bg-white rounded-2xl p-4 mb-4 flex items-center gap-3">
-          <div className="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-bold">
+        {/* 판매자 정보 — 클릭하면 판매자 프로필로 이동 */}
+        <Link
+          href={`/sellers/${product.user_id}`}
+          className="bg-white rounded-2xl p-4 mb-4 flex items-center gap-3 hover:bg-sky-50 transition-colors"
+        >
+          <div className="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-bold flex-shrink-0">
             {(product.seller_nickname ?? '판매자').charAt(0)}
           </div>
-          <div>
+          <div className="min-w-0 flex-1">
             <p className="font-semibold text-gray-800">{product.seller_nickname ?? '판매자'}</p>
-            <p className="text-xs text-gray-400">판매자</p>
+            <p className="text-xs text-gray-400">판매자 프로필 보기 →</p>
           </div>
-        </div>
+        </Link>
 
         {/* 상품 정보 */}
         <div className="bg-white rounded-2xl p-5 mb-4">
