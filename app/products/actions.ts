@@ -87,5 +87,6 @@ export async function createProduct(formData: FormData) {
     redirect('/products/new?error=' + encodeURIComponent(error.message))
   }
 
-  redirect('/?message=' + encodeURIComponent('판매글이 등록되었습니다!'))
+  // 등록이 끝나면 판매글 목록 페이지로 이동
+  redirect('/products?message=' + encodeURIComponent('판매글이 등록되었습니다!'))
 }

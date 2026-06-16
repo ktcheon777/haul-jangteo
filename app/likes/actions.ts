@@ -29,4 +29,5 @@ export async function toggleLike(formData: FormData) {
   }
 
   revalidatePath(`/products/${productId}`)
+  revalidatePath('/products')
 }
