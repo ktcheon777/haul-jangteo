@@ -21,7 +21,7 @@
 
 - **로컬 개발 서버 주소**: http://localhost:3001 (내 컴퓨터에서만 보이는 주소)
 - **배포된 웹사이트 주소**: https://market-xi-amber.vercel.app (누구나 접속 가능)
-- **GitHub 저장소**: https://github.com/ktcheon777/goguma-marketmin
+- **GitHub 저장소**: https://github.com/ktcheon777/haul-jangteo
 - **Supabase 프로젝트 ID**: carzpomuomdifjlvhgca (가계부 프로젝트와 동일한 데이터베이스 사용)
 - **작업 폴더**: 사용자는 앞으로도 계속 이 폴더(`C:\Users\student\Desktop\market`)에서 작업합니다.
 
